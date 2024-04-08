@@ -1,2 +1,7 @@
-<button [type]="'submit' ? 'submit' : 'button'" class="btn btn-primary"name="{{buttonName}}" [disabled]="isDisabled"
+<button
+[type]="'submit' ? 'submit' : 'button'"
+[ngClass]="buttonLargeWhite ? 'btn btn-lg btn-light fw-bold border-white bg-white' :
+  buttonLarge ? 'btn btn-lg btn-secondary fw-bold' :
+  'btn btn-lg btn-primary fw-bold'"
+name="{{buttonName}}" [disabled]="isDisabled"
 (click)="callParentFunction($event)">{{text}}</button>

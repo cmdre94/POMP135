@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataViewComponent } from './data-view.component';
+import { AboutUsViewComponent } from './about-us-view.component';
 
-describe('DataViewComponent', () => {
-  let component: DataViewComponent;
-  let fixture: ComponentFixture<DataViewComponent>;
+describe('AboutUsViewComponent', () => {
+  let component: AboutUsViewComponent;
+  let fixture: ComponentFixture<AboutUsViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataViewComponent ]
+      declarations: [ AboutUsViewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DataViewComponent);
+    fixture = TestBed.createComponent(AboutUsViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

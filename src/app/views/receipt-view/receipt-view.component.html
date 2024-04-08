@@ -1,0 +1,243 @@
+<ng-container *ngIf="!isFormSubmitted">
+  <body class="container bg-light">
+      <br>
+  
+      <div class="img-thumbnail text-center">
+        <img src="../../../assets/MasonicLogo.jpg" class="" alt="PHA">
+      </div>
+      <form id="receiptForm" [formGroup]="receiptForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3 justify-content-center">
+          <div class="col-md-4">
+            <label for="member" class="form-label fw-bold">Member</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" id="member" formControlName="member">
+          </div>
+          <div class="col-md-8">
+            <label for="exampleInputEmail1" class="form-label fw-bold">For</label>
+            <textarea type="text" class="form-control" id="for" formControlformControlName="for"></textarea>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="exampleInputEmail1" class="form-label fw-bold">Lodge Name</label>
+            <input type="text" class="form-control" id="lodgeName" formControlName="lodgeName" placeholder="Pride of Mt. Pisgah">
+            <div id="emailHelp" class="form-text">of M. W. Prince Hall Grand Lodge F. & A. M. of Texas Jurisdiction</div>
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label">Lodge No.</label>
+            <input type="text" class="form-control" id="lodgeNo" formControlName="lodgeNo" placeholder="135">
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label fw-bold">No.</label>
+            <input type="text" class="form-control" id="recNo" formControlName="recNo">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="exampleInputEmail1" class="form-label fw-bold">City</label>
+            <input type="text" class="form-control" id="city" formControlName="city" placeholder="Dallas">
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label fw-bold">State</label>
+            <input type="text" class="form-control" id="state" formControlName="state" placeholder="Texas">
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label fw-bold">Date</label>
+            <input type="date" class="form-control" id="recDate" formControlName="recDate">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="exampleInputEmail1" class="form-label fw-bold">Amount</label>
+            <input type="text" class="form-control" id="amount" formControlName="amount">
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label fw-bold">Amt. Paid</label>
+            <input type="text" class="form-control" id="amountPaid" formControlName="amountPaid">
+          </div>
+          <div class="col-md-4">
+            <label for="exampleInputPassword1" class="form-label fw-bold">Balance Due</label>
+            <input type="text" class="form-control" id="balanceDue" formControlName="balanceDue">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label class="form-label fw-bold" for="exampleCheck1">Payment Type</label>
+            <select class="form-select" aria-label="Payment Type" id="paymentType" formControlName="paymentType">
+              <option value="Zelle" selected>Zelle</option>
+              <option value="Cash">Cash</option>
+              <option value="Check">Check</option>
+              <option value="Money Order">Money Order</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="exampleInputEmail1" class="form-label">By</label>
+            <input type="text" class="form-control" id="by" formControlName="by" aria-describedby="emailHelp">
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- FOOTER -->
+      <!-- <footer class="container">
+          <p class="float-right"><a href="#">Back to top</a></p>
+      </footer> -->
+  </body>
+</ng-container>
+
+<!-- This section is the confirmation page -->
+
+<ng-container *ngIf="isFormSubmitted">
+  <div class="container justify-content-center ipad-width">
+    <div class="justify-content-center" id="formBody" #formBody>
+      <br>
+
+      <div class="img-thumbnail text-center">
+        <img src="../../../assets/MasonicLogo.jpg" class="" alt="PHA">
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col">
+          <label for="member" class="form-label fw-bold">Member</label>
+        </div>
+        <div class="col text-end">
+          <p id="member">{{receiptForm?.value?.member}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputEmail1" class="form-label fw-bold">For</label>
+        </div>
+        <div class="col text-end">
+          <p id="for">{{receiptForm?.value?.for}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Lodge Name</label>
+        </div>
+        <div class="col text-end">
+          <p id="lodgeName">{{receiptForm?.value?.lodgeName}}</p>
+          <div id="emailHelp" class="form-text">of M. W. Prince Hall Grand Lodge F. & A. M. of Texas Jurisdiction</div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">Lodge No.</label>
+        </div>
+        <div class="col text-end">
+          <p id="lodgeNo">{{receiptForm?.value?.lodgeNo}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">No.</label>
+        </div>
+        <div class="col text-end">
+          <p id="recNo">{{receiptForm?.value?.recNo}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputEmail1" class="form-label fw-bold">City</label>
+        </div>
+        <div class="col text-end">
+          <p id="city">{{receiptForm?.value?.city}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">State</label>
+        </div>
+        <div class="col text-end">
+          <p id="state">{{receiptForm?.value?.state}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">Date</label>
+        </div>
+        <div class="col text-end">
+          <p id="recDate">{{receiptForm?.value?.recDate}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputEmail1" class="form-label fw-bold">Amount</label>
+        </div>
+        <div class="col text-end">
+          <p id="amount">{{receiptForm?.value?.amount}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">Amt. Paid</label>
+        </div>
+        <div class="col text-end">
+          <p id="amountPaid">{{receiptForm?.value?.amountPaid}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputPassword1" class="form-label fw-bold">Balance Due</label>
+        </div>
+        <div class="col text-end">
+          <p id="balanceDue">{{receiptForm?.value?.balanceDue}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label" for="exampleCheck1 fw-bold">Payment Type</label>
+        </div>
+        <div class="col text-end">
+          <p id="paymentType">{{receiptForm?.value?.paymentType}}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="exampleInputEmail1" class="form-label fw-bold">By</label>
+        </div>
+        <div class="col text-end">
+          <p id="by">{{receiptForm?.value?.by}}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row my-3">
+      <div class="col-lg-6">
+        <h4>Create receipt?</h4>
+      </div>
+    </div>
+
+    <div class="row my-3">
+      <div class="col justify-content-center">
+        <button type="button" class="btn btn-primary" (click)="createReceipt()">YES</button> 
+        <button type="button" class="btn btn-light" (click)="goBack()">BACK</button>
+      </div>
+    </div>
+  </div>
+</ng-container>

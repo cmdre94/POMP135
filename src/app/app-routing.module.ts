@@ -2,20 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomepageViewComponent } from './views/homepage-view/homepage-view.component';
-import { LawViewComponent } from './views/law-view/law-view.component';
-import { ImagesViewComponent } from './views/images-view/images-view.component';
-import { WritingViewComponent } from './views/writing-view/writing-view.component';
-import { DataViewComponent } from './views/data-view/data-view.component';
-import { StrugglesOfTranslationViewComponent } from './views/struggles-of-translation-view/struggles-of-translation-view.component';
+import { HomepageViewTwoComponent } from './views/homepage-view-two/homepage-view-two.component';
+import { ReceiptViewComponent } from './views/receipt-view/receipt-view.component';
+import { AboutUsViewComponent } from './views/about-us-view/about-us-view.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '', pathMatch: 'full', component: HomepageViewComponent, data: { title: 'All Kinds of Stuff' } },
-  { path: 'writing', component: WritingViewComponent, data: { title: 'Writing' } },
-  { path: 'law', component: LawViewComponent, data: { title: 'Law' } },
-  { path: 'images', component: ImagesViewComponent, data: { title: 'Images' } },
-  { path: 'data', component: DataViewComponent, data: { title: 'Data' } },
-  { path: 'strugglesOfTranslation', component: StrugglesOfTranslationViewComponent, data: { title: 'Struggles of Translation' } }
+  { path: '', pathMatch: 'full', component: HomepageViewComponent, data: { title: 'Pride of Mt Pisgah' } },
+  { path: 'home2', pathMatch: 'full', component: HomepageViewTwoComponent, data: { title: 'Pride of Mt Pisgah' } },
+  { path: 'receipt', pathMatch: 'full', component: ReceiptViewComponent, data: { title: 'Receipt' } },
+  { path: 'aboutUs', pathMatch: 'full', component: AboutUsViewComponent, data: { title: 'About Us' } }
 ];
 
 @NgModule({

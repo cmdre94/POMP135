@@ -12,6 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input() public id: string;
   @Input() public buttonSmall: boolean;
   @Input() public buttonLarge: boolean;
+  @Input() public buttonLargeWhite: boolean;
   @Input() public parentFunction: Function;
   @Input() public submit: boolean;
   @Input() public isDisabled: boolean;

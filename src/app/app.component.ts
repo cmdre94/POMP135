@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AVA';
+  title = 'POMP135';
   constructor(private router: Router) {}
 
   ngOnInit() {

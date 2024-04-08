@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImagesViewComponent } from './images-view.component';
+import { ReceiptViewComponent } from './receipt-view.component';
 
-describe('ImagesViewComponent', () => {
-  let component: ImagesViewComponent;
-  let fixture: ComponentFixture<ImagesViewComponent>;
+describe('ReceiptViewComponent', () => {
+  let component: ReceiptViewComponent;
+  let fixture: ComponentFixture<ReceiptViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImagesViewComponent ]
+      declarations: [ ReceiptViewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImagesViewComponent);
+    fixture = TestBed.createComponent(ReceiptViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
