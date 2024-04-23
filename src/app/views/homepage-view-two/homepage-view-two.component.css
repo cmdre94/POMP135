@@ -54,7 +54,7 @@ body {
 }
 
 .full-screen-bg {
-  background-image: url('../../../assets/SolarEclipse2024.jpeg');
+  background-image: url('../../../assets/mountain.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh; /* 100% viewport height */

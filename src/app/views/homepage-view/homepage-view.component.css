@@ -80,3 +80,23 @@ body {
     margin-top: 7rem;
   }
 }
+
+/*
+ * Vvery Large Fonts
+ */
+ .fs-72 {
+  font-size: 72px;
+}
+.fs-50 {
+  font-size: 50px;
+}
+.fs-lg-72 {
+  @media screen and (min-width: 480px) {
+    font-size: 72px;
+  }
+}
+.fs-lg-50 {
+  @media screen and (min-width: 480px) {
+    font-size: 50px;
+  }
+}
