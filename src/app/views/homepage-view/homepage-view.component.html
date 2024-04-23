@@ -12,7 +12,9 @@
             <img src="../../../assets/F&AM.JPG" class="img-fluid">
             <h1 class="text-dark">Pride of Mt Pisgah</h1>
             <p class="text-dark">Well done is better than well said</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <p>
+              <app-button text="Learn More" [parentFunction]="routeToView.bind(this, '/aboutUs')"></app-button>
+            </p>
           </div>
         </div>
       </div>
