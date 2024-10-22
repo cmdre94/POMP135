@@ -8,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   public activeRoute: string;
+  public isLoggedIn = false;
+  public isAdmin = false;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

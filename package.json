@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl true --ssl-key key.pem --ssl-cert cert.pem --port 4200 --host pomp-test.com",
     "build": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
