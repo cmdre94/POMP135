@@ -14,10 +14,11 @@ import { ButtonComponent } from './components/button/button.component';
 import { HomepageViewTwoComponent } from './views/homepage-view-two/homepage-view-two.component';
 import { ReceiptViewComponent } from './views/receipt-view/receipt-view.component';
 import { AboutUsViewComponent } from './views/about-us-view/about-us-view.component';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LinkComponent, HomepageViewComponent, SpacingComponent, CardComponent, ButtonComponent, HomepageViewTwoComponent, ReceiptViewComponent, AboutUsViewComponent],
+  declarations: [AppComponent, NavbarComponent, LinkComponent, HomepageViewComponent, SpacingComponent, CardComponent, ButtonComponent, HomepageViewTwoComponent, ReceiptViewComponent, AboutUsViewComponent, VideoPlayerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -100,3 +100,14 @@ body {
     font-size: 50px;
   }
 }
+
+.customIframe {
+  @media (max-width: 480px) {
+    width: 340px;
+    height: 600px;
+  }
+  @media (min-width: 480px) {
+    width: 340px;
+    height: 600px;
+  }
+}

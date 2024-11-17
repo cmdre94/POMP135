@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel carousel-dark slide mb-6" data-bs-ride="carousel">
+<div id="myCarousel" class="carousel carousel-dark slide mb-6">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -10,7 +10,7 @@
         <div class="container">
           <div class="carousel-caption">
             <img src="../../../assets/F&AM.JPG" class="img-fluid">
-            <h1 class="text-dark">Pride of Mt Pisgah</h1>
+            <h1 class="text-dark">Pride of Mount Pisgah</h1>
             <p class="text-dark">Well done is better than well said</p>
             <p>
               <app-button text="Learn More" [parentFunction]="routeToView.bind(this, '/aboutUs')"></app-button>
@@ -65,8 +65,24 @@
   <div class="container marketing">
     <!-- START THE FEATURETTES -->
     <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Trunk or Treat <span class="text-body-secondary">2024</span></h2>
+        <p class="lead"></p>
+      </div>
+      <div class="col-md-5 text-center order-md-1">
+        <iframe class="customIframe"
+          src="https://www.youtube.com/embed/catXAumvcaU"
+          title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Feeding the Homeless. <span class="text-body-secondary">Luke 6:20</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">Brothers Gather and Give. <span class="text-body-secondary">Luke 6:20</span></h2>
         <p class="lead">Looking at his disciples, he said: “Blessed are you who are poor, for yours is the kingdom of God."</p>
       </div>
       <div class="col-md-5">
@@ -107,6 +123,12 @@
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <div class="row text-center">
+      <p>&copy; Pride of Mount Pisgah Lodge No. 135</p>
+    </div>
+    <div class="row text-center">
+      <p class="float-end"><a href="#">Back to top</a></p>
+    </div>
+    
+    
   </footer>
